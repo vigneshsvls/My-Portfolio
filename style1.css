@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border:none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:"Nunito,sans-serif"; 
+}
+:root{
+    background-color: rgb(255, 250, 240);
+    --bg-color:black;
+    --snd-bf-color:orangered;
+    --text-color:black;
+    --main-color:orangered;
+}
+
+html{
+    font-size: 62.5%;
+    color:white;
+}
+
+section{
+    min-height: 100vh;
+    padding:10rem 9% 2rem;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 2rem 9%;
+    background:var(--bg-color);
+    backdrop-filter: blur(10px);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color:white;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color:orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+    transform: scale(1.1);   
+}
+span{
+    color: orangered;
+}
+
+span:hover{
+    color:orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+    transform: scale(1.1);
+}
+
+.navbar a{
+    font-size:1.5rem;
+    color:white;
+    margin-left: 4rem;
+    font-weight: 700;
+}
+.navbar a:hover{
+    color: orangered;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color:var(--text-color);
+    display: none;
+}
+
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h{
+    font-size: 3.6rem;
+    font-weight: 200;
+    color: black;
+}
+
+.home-content h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color:black;
+}
+.home-content h2{
+    font-weight:200;
+    color:black;
+    font-size: 5.6rem;
+    
+}
+
+.home-content h2:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span1{
+    color:var(--main-color);
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.image img{
+    margin-left: 5rem;
+    width:25vw;
+    border-radius:55%;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:4rem;
+    height:4rem;
+    background:transparent;
+    border:.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 1.8rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    font-weight: 500;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 3rem var(--main-color);
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    background:var(--snd-bf-color);
+}
+
+.about img{
+    width:35vw;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align:left;
+    font-family:'garamond';
+    font-size: 2.6rem;
+    line-height: 1.2;
+}
+
+.about-content h4{
+    text-align: left;
+    font-style: arial;
+    font-size: 3.6rem;
+}
+
+.about-content p{
+    font-size: 2.8rem;
+    font-family:'Courier New', Courier, monospace;
+    margin:2rem 0 3rem;
+    font-weight: 500;
+}
+
+.project{
+    
+    background:linear-gradient(black,#FF7F50);
+}
+h6{
+    color:rgb(255, 250, 240);
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+h5{
+    color:black;
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+.project h6{
+    margin-bottom: 4rem;
+}
+
+.project-container{
+    margin-top:8rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    gap:2.5rem;
+
+}
+
+.project-container .project-box{
+    position: relative;
+    border-radius: 2rem;
+    border: 0cqmax;
+    overflow: hidden;
+    display:flex ;
+}
+
+.project-box img{
+    width:100%;
+    transition: .5s ease;
+    opacity:0.9;
+}
+
+.project-box:hover img{
+    transform: scale(1.1);
+}
+
+.project-box .project-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(rgba(0,0,0,0.1),var(--main-color));
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layer{
+    transform: translateY(0);
+}
+
+.project-layer h5{
+    font-size: 3rem;
+}
+
+.project-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.project-layer i{
+    font-size: 2rem;
+}
+
+
+.wrapper{
+    display: flex;
+    padding-top:50px;
+    
+}
+
+.collapse{
+    max-width:500px;
+    overflow:hidden;
+    font-weight: 500;
+}
+.collapse input{
+    display:none;
+}
+
+.collapse label{
+    font-size: 20px;
+    position:relative;
+    font-weight:600;
+    background:white;
+    color:black;
+    display:block;
+    margin-bottom:10px;
+    cursor:pointer;
+    padding:15px;
+    border-radius:4px;
+    z-index: 1;
+}
+
+.collapse label:after{
+    content:"";
+    position:absolute;
+    right:15px;
+    top:20px;
+    width:18px;
+    height:18px;
+    transition: all 0.3s ease;
+}
+
+.collapse label input:checked + label:after{
+    transform: rotate(90deg);
+}
+
+.coll-text{
+    max-height:1px;
+    overflow:hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.collapse input:checked ~ .coll-text{
+    max-height: 300px;
+    padding-bottom:25px;
+    background:rgb(255, 250, 240);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1),0 4px 11px 0 rgba(0,0,0,0.08);
+    opacity: 1;
+    top:0;
+}
+
+.coll-text label .labelclass{
+    color:blue;
+    padding-left:15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.coll-text1{
+    max-height:1px;
+    overflow:hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.collapse input:checked ~ .coll-text1{
+    max-height: 300px;
+    padding-bottom:25px;
+    background:rgb(255, 250, 240);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1),0 4px 11px 0 rgba(0,0,0,0.08);
+    opacity: 1;
+    top:0;
+}
+
+.coll-text1 label .labelclass{
+    color:blue;
+    padding-left:15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.coll-text2{
+    max-height:1px;
+    overflow:hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.collapse input:checked ~ .coll-text2{
+    max-height: 300px;
+    padding-bottom:25px;
+    background:rgb(255, 250, 240);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1),0 4px 11px 0 rgba(0,0,0,0.08);
+    opacity: 1;
+    top:0;
+}
+
+.coll-text2 label .labelclass{
+    color:blue;
+    padding-left:15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.coll-text3{
+    max-height:1px;
+    overflow:hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.collapse input:checked ~ .coll-text3{
+    max-height: 300px;
+    padding-bottom:25px;
+    background:rgb(255, 250, 240);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1),0 4px 11px 0 rgba(0,0,0,0.08);
+    opacity: 1;
+    top:0;
+}
+
+.coll-text3 label .labelclass{
+    color:blue;
+    padding-left:15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.container{
+    width:100%;
+    padding:35px 10%;
+}
+main.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-column-gap:20px;
+}
+
+
+.col .contents{
+    padding:0px 40px;
+    border-left:2px solid #bababa;
+}
+
+h11{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+}
+
+h12{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top:10px;
+
+}
+
+.education{
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+}
+
+p1{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contents{
+    margin-left: 28%;
+}
+.box{
+    padding:10px 0 50px 0;
+    
+}
+
+@media (max-width:1000px)
+{
+    html{
+        font-size:50%;
+    }
+
+}
+
+@media (max-width:990px)
+{
+    .header{
+        padding:2rem 3%;
+    }
+
+    section{
+        padding:10rem 3%;
+    }
+
+    .services{
+        padding:7rem;
+    }
+
+    .project{
+        padding-bottom:7rem;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+    
+}
+
+@media (max-width:768px){
+    #menu-icon{
+        display:flex;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+    .home-content h{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-content{
+        order:2;
+    }
+    .home-img img{
+        
+        width:70vw;
+        margin-top:4rem;
+        margin-right: 50%;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+    .about-img img{
+        width:90vw;
+        margin-top:4rem;
+    }
+
+    .education h6{
+        margin-bottom:3rem;
+    }
+
+    .education .box h11{
+        font-size:20px;
+
+    }
+
+    .education .box h12{
+        font-size:15px;
+        
+    }
+
+    .education .box p{
+        font-size:10px;
+        
+    }
+
+    .projects h6{
+        margin-bottom: 3rem;
+    }
+    .project-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:617px){
+    .project-container{
+        grid-template-columns: 1fr;
+
+    }
+    .home-img img{
+        width:100vw;
+        margin-top:8rem;
+        margin-left: 2rem;
+    }
+
+    .about-img img{
+        width:100vw;
+        margin-top: 4rem;
+    }
+}
